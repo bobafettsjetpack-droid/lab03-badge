@@ -8,6 +8,8 @@ Description: Builds a student badge from a name, two random assignments, and the
 
 //Part 1: The name
 //adding !; fixes the orange error marker (I don't know why it does, I just wanted the lines gone)
+using System.Data.Common;
+
 System.Console.WriteLine("What is your name? ");
 string fullName = Console.ReadLine()!;
 fullName = fullName.Trim();
@@ -77,7 +79,7 @@ System.Console.WriteLine($"Walk time: {Convert.ToString(timeMin)} minutes {Conve
 //Part 4
 
 System.Console.WriteLine("==================================\n");
-System.Console.WriteLine($"        ETSU STUDENT BADGE\n");
+System.Console.WriteLine($"{"ETSU STUDENT BADGE".PadLeft(26)}\n"); //padding works by starting from the beginning, not the end of words
 System.Console.WriteLine("==================================\n");
 
 //text.PadRight(width)
