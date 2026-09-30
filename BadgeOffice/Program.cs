@@ -25,3 +25,10 @@ System.Console.WriteLine($"Letters in last name: {lastNameLetters}");
 
 //Part 2
 
+Random rng = new Random();
+
+int studentId = rng.Next(100000, 1000000);
+int lockerNumber = rng.Next(1, 501);
+
+System.Console.WriteLine($"Student ID: {Convert.ToString(studentId)}");
+System.Console.WriteLine($"Locker: {Convert.ToString(lockerNumber)}");
