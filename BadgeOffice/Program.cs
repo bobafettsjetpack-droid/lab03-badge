@@ -32,3 +32,37 @@ int lockerNumber = rng.Next(1, 501);
 
 System.Console.WriteLine($"Student ID: {Convert.ToString(studentId)}");
 System.Console.WriteLine($"Locker: {Convert.ToString(lockerNumber)}");
+
+//Part 3
+
+System.Console.WriteLine("What is your dorm's X location? ");
+double dormX = Convert.ToDouble(Console.ReadLine());
+
+System.Console.WriteLine("What is your dorm's Y location? ");
+double dormY = Convert.ToDouble(Console.ReadLine());
+
+System.Console.WriteLine("What is your class's X location? ");
+double classX = Convert.ToDouble(Console.ReadLine());
+
+System.Console.WriteLine("What is your class's Y location? ");
+double classY = Convert.ToDouble(Console.ReadLine());
+
+System.Console.WriteLine("What is your walking speed in feet per second? ");
+double walkingSpeed = Convert.ToDouble(Console.ReadLine());
+
+double distance = Math.Sqrt(Math.Pow((classX - dormX), 2) + Math.Pow((classY - dormY), 2));
+distance = Math.Round(distance, 1);
+
+System.Console.WriteLine($"Distance: {Convert.ToString(distance)} feet");
+
+double distRound = Math.Round(distance, 0);
+
+double timeMin = distRound / 60;
+timeMin = Math.Round(timeMin, 0);
+
+double timeSec = distRound % 60;
+timeSec = Math.Round(distRound, 0);
+
+System.Console.WriteLine($"Walk time: {Convert.ToString(timeMin)} minutes {Convert.ToString(timeSec)} seconds");
+
+
